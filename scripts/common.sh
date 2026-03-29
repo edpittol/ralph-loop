@@ -6,6 +6,9 @@ set -euo pipefail
 SKILL_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
 export SKILL_DIR
 
+# Default completion promise for Ralph loop
+DEFAULT_COMPLETION_PROMISE="COMPLETE"
+
 # Converts an absolute path to the ccsw encoded directory name.
 # Example: /home/pittol/Sites/hardwork -> -home-pittol-Sites-hardwork
 encode_path() {

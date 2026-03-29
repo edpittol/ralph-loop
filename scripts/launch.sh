@@ -122,6 +122,7 @@ sed "s|{{STOP_HOOK_PATH}}|$STOP_HOOK_PATH|g" \
 AGENT_PROMPT=$(sed \
   -e "s|{{PRD_PATH}}|$PRD_FILE|g" \
   -e "s|{{PROGRESS_PATH}}|$PROGRESS_FILE|g" \
+  -e "s|{{COMPLETION_PROMISE}}|$DEFAULT_COMPLETION_PROMISE|g" \
   "$SKILL_DIR/references/agent-prompt.md")
 
 # Create ralph state file for the stop-hook
@@ -131,7 +132,7 @@ active: true
 iteration: 1
 session_id:
 max_iterations: $MAX_ITERATIONS
-completion_promise: "COMPLETE"
+completion_promise: "$DEFAULT_COMPLETION_PROMISE"
 started_at: "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 ---
 
