@@ -87,7 +87,7 @@ fi
 
 # Check for completion promise
 if [[ "$COMPLETION_PROMISE" != "null" ]] && [[ -n "$COMPLETION_PROMISE" ]]; then
-  PROMISE_TEXT=$(echo "$LAST_OUTPUT" | perl -0777 -pe 's/.*?<promise>(.*?)<\/promise>.*/$1/s; s/^\s+|\s+$//g; s/\s+/ /g' 2>/dev/null || echo "")
+  PROMISE_TEXT=$(echo "$LAST_OUTPUT" | grep -oE '<promise>.*</promise>' | sed 's/<[^>]*>//g' 2>/dev/null || echo "")
 
   if [[ -n "$PROMISE_TEXT" ]] && [[ "$PROMISE_TEXT" = "$COMPLETION_PROMISE" ]]; then
     echo "Ralph loop: detected <promise>$COMPLETION_PROMISE</promise>. Done." >&2
