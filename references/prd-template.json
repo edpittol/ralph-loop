@@ -1,0 +1,15 @@
+{
+  "project": "",
+  "branchName": "ralph/feature-name",
+  "description": "",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "",
+      "description": "",
+      "acceptanceCriteria": [],
+      "priority": 1,
+      "passes": false
+    }
+  ]
+}

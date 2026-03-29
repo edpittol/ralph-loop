@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "bash {{STOP_HOOK_PATH}}"
+      }
+    ]
+  }
+}
