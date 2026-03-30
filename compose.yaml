@@ -1,0 +1,9 @@
+services:
+  qa:
+    build:
+      context: docker/qa
+    volumes:
+      - .:/app:ro
+      - ./docker/qa/entrypoint.sh:/entrypoint.sh:ro
+    working_dir: /app
+    command: /entrypoint.sh
