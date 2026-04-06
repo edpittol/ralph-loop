@@ -30,9 +30,13 @@ On your first iteration (or if progress.txt has no "Setup completed" entry):
 4. Pick the **highest priority** user story where `passes: false`
 5. Implement that SINGLE user story
 6. Run QA checks (from RALPH.md, project README, or auto-discovered test commands)
-7. If checks pass, commit ALL changes for this story with message: `feat: [Story ID] - [Story Title]`
+7. If checks pass, commit ALL changes for this story with message: `feat: [Story Title]`
 8. Update the PRD to set `passes: true` for the completed story
 9. Append your progress to `{{PROGRESS_PATH}}`
+
+## Code instructions
+
+- No add the user story reference in comments
 
 ## Progress report format
 
