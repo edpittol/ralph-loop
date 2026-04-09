@@ -2,8 +2,13 @@
   "hooks": {
     "Stop": [
       {
-        "type": "command",
-        "command": "bash {{STOP_HOOK_PATH}}"
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash {{STOP_HOOK_PATH}}"
+          }
+        ]
       }
     ]
   }
